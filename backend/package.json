@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:gen": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "prisma": "prisma"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "prisma": "^6.16.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.6",
+    "typescript": "~5.8.3"
+  }
+}

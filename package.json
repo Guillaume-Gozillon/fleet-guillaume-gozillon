@@ -1,0 +1,21 @@
+{
+  "name": "fleet-guillaume-gozillon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "generate:types": "pnpm -F backend prisma generate && pnpm -F @fleet/shared-types build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2"
+  }
+}
